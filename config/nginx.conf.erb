@@ -159,11 +159,6 @@ http {
       <% if ENV["NGINX_DEBUG"] %>add_header Ember-Cli-Font on;<% end %>
     }
 
-    location ~ /\. {
-      deny all;
-      <% if ENV["NGINX_DEBUG"] %>add_header Ember-Cli-Denied on;<% end %>
-    }
-
     location / {
       expires -1;
 
